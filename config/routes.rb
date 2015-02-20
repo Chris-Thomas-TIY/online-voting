@@ -5,7 +5,7 @@ resources :bills
 
   get 'login/new'
 
-  get 'login/create'
+  post 'login/create'
 
   get 'login/logout'
 

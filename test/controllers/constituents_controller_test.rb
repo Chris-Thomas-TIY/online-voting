@@ -34,10 +34,10 @@ class ConstituentsControllerTest < ActionController::TestCase
   #  assert_response :success
   #end
 #
-test "non owner constituents cant create bills" do
-  get new_bill_path
-
-  assert_redirected_to login_path
-end
+# test "non owner constituents cant create bills" do
+#   get new_bill_path
+#
+#   assert_redirected_to login_path
+# end
 
 end
