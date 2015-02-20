@@ -6,12 +6,12 @@ class LoginControllerTest < ActionController::TestCase
   end
 
   test "should be able to login" do
-    post :create, login: { email: @jim.email, password: 'jim' }
+    post :create, { email: @jim.email, password: 'jim' }
     assert_redirected_to bills_path
   end
 
   test "should not allow wrong password" do
-    post :create, login: { email: @jim.email, password: 'wrong' }
+    post :create, { email: @jim.email, password: 'wrong' }
     assert_redirected_to login_new_path
   end
 

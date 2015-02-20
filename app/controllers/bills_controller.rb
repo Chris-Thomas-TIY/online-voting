@@ -3,6 +3,7 @@ class BillsController < ApplicationController
   end
 
   def create
+    @bill = Bill.new(bill_params)
   end
 
   def update
@@ -19,4 +20,9 @@ class BillsController < ApplicationController
 
   def show
   end
+
+  private
+    def bill_params
+      params.require(:bill).permit(:actual_vote, :name)
+    end
 end
