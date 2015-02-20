@@ -8,4 +8,5 @@ class BillTest < ActiveSupport::TestCase
   test "there are bills" do
     assert Bill.count > 0
   end
+  
 end
