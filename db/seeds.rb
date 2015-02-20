@@ -8,3 +8,4 @@
 
 
 Constituent.create(name:"Jim",email:"jim@gmail.com",password:"password")
+Constituent.create(name:"Owner", email:"Owner@person.com", password:"owner")
