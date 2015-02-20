@@ -36,7 +36,7 @@ class BillsControllerTest < ActionController::TestCase
       post :create, bill: { name: "Bills bill", actual_vote: true}
     end
 
-    assert_redirected_to bill_path
+    assert_redirected_to bills_path
   end
 #
   #test "should get show" do

@@ -3,7 +3,8 @@ class BillsController < ApplicationController
   end
 
   def create
-    @bill = Bill.new(bill_params)
+    Bill.create(bill_params)
+    redirect_to bills_path
   end
 
   def update
