@@ -19,4 +19,9 @@ class ConstituentsController < ApplicationController
 
   def show
   end
+
+  private
+    def constituent_params
+      params.require(:constituent).permit(:email, :name, :password)
+    end
 end

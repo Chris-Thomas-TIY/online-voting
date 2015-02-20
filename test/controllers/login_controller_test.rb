@@ -12,7 +12,7 @@ class LoginControllerTest < ActionController::TestCase
 
   test "should not allow wrong password" do
     post :create, login: { email: @jim.email, password: 'wrong' }
-    assert_redirected_to login_path
+    assert_redirected_to login_new_path
   end
 
 
