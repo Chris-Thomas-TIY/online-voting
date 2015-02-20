@@ -31,6 +31,11 @@ class BillsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "displays bills" do
+    get :index
+    assert_select "tr", Bill.count + 1
+  end
+
   test "should create bill" do
     assert_difference('Bill.count') do
       post :create, bill: { name: "Bills bill", actual_vote: true}
