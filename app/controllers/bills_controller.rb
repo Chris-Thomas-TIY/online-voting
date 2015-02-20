@@ -17,6 +17,7 @@ class BillsController < ApplicationController
   end
 
   def index
+    @bills = Bill.all
   end
 
   def show

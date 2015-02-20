@@ -33,7 +33,7 @@ class BillsControllerTest < ActionController::TestCase
 
   test "displays bills" do
     get :index
-    assert_select "tr", Bill.count + 1
+    assert_select "tr", Bill.count
   end
 
   test "should create bill" do

@@ -1,2 +1,18 @@
 <h1>Bills#index</h1>
 <p>Find me in app/views/bills/index.html.erb</p>
+
+
+<table>
+  <thead>
+    <h1> Bills</h1>
+  </thead>
+
+  <tbody>
+    <% @bills.each do |b| %>
+      <tr>
+        <td> <%= b.name %> </td>
+        <td> <%= b.actual_vote %> </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>

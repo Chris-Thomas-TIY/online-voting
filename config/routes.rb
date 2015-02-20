@@ -3,17 +3,17 @@ resources :constituents
 resources :opinions
 resources :bills
 
-  get 'login/new'
+  get 'login' => 'login#new'
 
-  post 'login/create'
+  post 'login' => 'login#create'
 
-  get 'login/logout'
+  get 'logout' => 'login#logout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'login#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
   def new
+
   end
 
   def create
@@ -10,7 +11,7 @@ class LoginController < ApplicationController
       redirect_to bills_path
     else
       flash.now[:notice] = "Invalid e-mail or password."
-      redirect_to login_new_path
+      redirect_to login_path
     end
   end
 
