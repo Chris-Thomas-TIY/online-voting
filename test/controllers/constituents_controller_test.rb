@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class ConstituentsControllerTest < ActionController::TestCase
+  setup do
+    @jim = Constituent.create(name:"jim", email:"Jim@person.com", password:"jim")
+  end
   #test "should get new" do
   #  get :new
   #  assert_response :success
@@ -31,9 +34,10 @@ class ConstituentsControllerTest < ActionController::TestCase
   #  assert_response :success
   #end
 #
-  #test "should get show" do
-  #  get :show
-  #  assert_response :success
-#end
+test "non owner constituents cant create bills" do
+  get new_bill_path
+
+  assert_redirected_to login_path
+end
 
 end

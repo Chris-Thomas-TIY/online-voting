@@ -15,7 +15,8 @@ class LoginControllerTest < ActionController::TestCase
     assert_redirected_to login_new_path
   end
 
-
-
-
+  #test "should get logout" do
+  #  get :logout
+  #  assert_response :success
+  #end
 end

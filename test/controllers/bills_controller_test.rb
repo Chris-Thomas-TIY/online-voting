@@ -26,10 +26,18 @@ class BillsControllerTest < ActionController::TestCase
   #  assert_response :success
   #end
 #
-  #test "should get index" do
-  #  get :index
-  #  assert_response :success
-  #end
+  test "should get index" do
+    get :index
+    assert_response :success
+  end
+
+  test "should create bill" do
+    assert_difference('Bill.count') do
+      post :create, bill: { name: "Bills bill", actual_vote: true}
+    end
+
+    assert_redirected_to bill_path
+  end
 #
   #test "should get show" do
   #  get :show
