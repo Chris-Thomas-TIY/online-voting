@@ -40,7 +40,7 @@ class ConstituentsControllerTest < ActionController::TestCase
 #   get new_bill_path  setup do
 
 
-  test "Constituents can vote on bills" do
+  test "constituents can vote on bills" do
     assert Opinion.create(vote: false, constituent_id: @jim.id, bill_id: @bill.id)
   end
 

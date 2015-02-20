@@ -8,7 +8,7 @@ class ConstituentTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test "Constituents have opinions" do
+  test "constituents have opinions" do
     assert @constituent.opinions.first
   end
 

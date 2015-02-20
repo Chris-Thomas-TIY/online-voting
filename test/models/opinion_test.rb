@@ -9,8 +9,8 @@ class OpinionTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test "Opinions belong to bills" do
+  test "opinions belong to bills" do
     assert @opinion.bill
   end
-  
+
 end

@@ -7,9 +7,10 @@ class OpinionsControllerTest < ActionController::TestCase
     @closed_bill = Bill.create(name: "Dumb Bill with No Support!!!", actual_vote: false)
   end
 
-  test "Constituents cannot vote on closed bills" do
+  test "constituents cannot vote on closed bills" do
     refute_difference('Opinion.count') do
-      post :create { vote: true, constituent_id: @jim.id, bill_id: @closed_bill.id }
+      post :create, { vote: true, constituent_id: @jim.id, bill_id: @closed_bill.id }
+    end
   end
   #test "should get new" do
   #  get :new
