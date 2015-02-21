@@ -8,7 +8,11 @@ class LoginController < ApplicationController
     if constituent && constituent.authenticate(params[:password])
       session[:constituent_id] = constituent.id
       flash[:notice] = "Welcome!"
-      redirect_to bills_path
+      if constituent == Constituent.owner
+        redirect_to constituents_path
+      else
+        redirect_to bills_path
+      end
     else
       flash.now[:notice] = "Invalid e-mail or password."
       redirect_to login_path

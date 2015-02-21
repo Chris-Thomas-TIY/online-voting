@@ -1,4 +1,5 @@
 class ConstituentsController < ApplicationController
+
   def new
   end
 
