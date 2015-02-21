@@ -1,4 +1,4 @@
-class OwnerCanCreateBills < Capybara::Rails::TestCase
+class OwnerCanCreateConstituents < Capybara::Rails::TestCase
   setup do
     @owner = Constituent.create(name:"Owner", email:"Owner@person.com", password:"owner")
 
@@ -15,8 +15,8 @@ class OwnerCanCreateBills < Capybara::Rails::TestCase
     click_button 'Create Constituent'
     assert_equal new_constituent_path, current_path
     within(".constituent") do
-      fill_in 'Name', :with => "bobberson bob son jr"
-      fill_in 'Email', :with => 'bbsjr@person.com'
+      fill_in 'Name', :with => "bob"
+      fill_in 'Email', :with => 'bob@person.com'
       fill_in 'Password', :with => 'password'
     end
     assert_difference('Constituent.count') do
