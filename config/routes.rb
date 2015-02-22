@@ -3,6 +3,8 @@ resources :constituents
 resources :opinions
 resources :bills
 
+  post 'bills/new' => 'bills#create'
+
   get 'login' => 'login#new'
 
   post 'login' => 'login#create'

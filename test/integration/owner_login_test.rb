@@ -1,6 +1,6 @@
 class OwnerLogin < Capybara::Rails::TestCase
   setup do
-    @owner = Constituent.create(name:"Owner", email:"Owner@person.com", password:"owner")
+    @owner = Constituent.create(name:"Owner", email:"owner@person.com", password:"owner")
     # @bill = Bill.create(name: "An Act to Prohibit the Public Display of Awesomeness")
     # @closed_bill = Bill.create(name: "Dumb Bill with No Support!!!", actual_vote: false)
   end

@@ -8,7 +8,7 @@ class LoginController < ApplicationController
     if constituent && constituent.authenticate(params[:password])
       session[:constituent_id] = constituent.id
       flash[:notice] = "Welcome!"
-      if constituent == Constituent.owner
+      if Constituent.owner.include?(constituent)
         redirect_to constituents_path
       else
         redirect_to bills_path

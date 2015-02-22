@@ -1,6 +1,6 @@
 class OwnerCanCreateConstituents < Capybara::Rails::TestCase
   setup do
-    @owner = Constituent.create(name:"Owner", email:"Owner@person.com", password:"owner")
+    @owner = Constituent.create(name:"Owner", email:"owner@person.com", password:"owner")
 
   end
 
