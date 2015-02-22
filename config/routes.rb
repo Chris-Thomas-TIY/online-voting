@@ -5,6 +5,8 @@ resources :bills
 
   post 'bills/new' => 'bills#create'
 
+  post 'constituents/new' => 'constituents#create'
+  
   get 'login' => 'login#new'
 
   post 'login' => 'login#create'

@@ -4,7 +4,7 @@ class OwnerCanCreateConstituents < Capybara::Rails::TestCase
 
   end
 
-  def test_owner_can_create_bills
+  def test_owner_can_create_constiuent
     visit '/login'
     within(".log-in") do
       fill_in 'Email', :with => "#{@owner.email}"
@@ -12,7 +12,7 @@ class OwnerCanCreateConstituents < Capybara::Rails::TestCase
     end
     click_button 'Log in'
     assert_equal constituents_path, current_path
-    click_button 'Create Constituent'
+    click_link 'Create Constituent'
     assert_equal new_constituent_path, current_path
     within(".constituent") do
       fill_in 'Name', :with => "bob"
